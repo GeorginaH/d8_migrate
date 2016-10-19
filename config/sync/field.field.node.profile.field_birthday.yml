@@ -1,0 +1,24 @@
+uuid: b3d46097-a5ba-4e00-a372-955bde117c8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_birthday
+    - node.type.profile
+  module:
+    - datetime
+id: node.profile.field_birthday
+field_name: field_birthday
+entity_type: node
+bundle: profile
+label: Birthday
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

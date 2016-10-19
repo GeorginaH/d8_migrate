@@ -1,0 +1,11 @@
+name: My first migration
+description: With this module I make a migration's csv file.
+type: module
+core: 8.x
+package: Migration
+dependencies:
+  - migrate
+  - migrate_plus
+  - migrate_source_csv
+  - migrate_tools
+  - node

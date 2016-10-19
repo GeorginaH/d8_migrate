@@ -8,58 +8,6 @@
       "url": "web/modules/custom/*"
     },
     {
-      "type": "package",
-      "package": {
-        "name": "enyo/dropzone",
-        "version": "dev-master",
-        "type": "drupal-library",
-        "source": {
-          "url": "https://github.com/enyo/dropzone.git",
-          "type": "git",
-          "reference": "origin/master"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "desandro/imagesloaded",
-        "version": "dev-master",
-        "type": "drupal-library",
-        "source": {
-          "url": "https://github.com/desandro/imagesloaded.git",
-          "type": "git",
-          "reference": "origin/master"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "desandro/masonry",
-        "version": "dev-master",
-        "type": "drupal-library",
-        "source": {
-          "url": "https://github.com/desandro/masonry.git",
-          "type": "git",
-          "reference": "origin/master"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "jackmoore/colorbox",
-        "version": "dev-master",
-        "type": "drupal-library",
-        "source": {
-          "url": "https://github.com/jackmoore/colorbox",
-          "type": "git",
-          "reference": "origin/master"
-        }
-      }
-    },
-    {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
     },
@@ -71,33 +19,18 @@
   "require": {
     "composer/installers": "~1",
     "cweagans/composer-patches": "~1.0",
-    "desandro/imagesloaded": "*",
-    "desandro/masonry": "*",
     "drupal-composer/drupal-scaffold": "~1",
     "drupal/admin_toolbar": "~1",
-    "drupal/audiofield": "~1",
     "drupal/bootstrap": "~3",
     "drupal/config_installer": "~8",
     "drupal/console": "~1",
     "drupal/core": "~8",
-    "drupal/entity_browser": "1.x-dev",
-    "drupal/file_browser": "1.x-dev",
-    "drupal/google_analytics": "~2",
-    "drupal/inline_entity_form": "1.x-dev",
-    "drupal/media_entity_audio": "1.x-dev",
-    "drupal/migrate_plus": "2.x-dev",
-    "drupal/migrate_tools": "~2",
-    "drupal/ng_lightbox": "~1",
-    "drupal/pathauto": "~1",
-    "drupal/simple_sitemap": "2.x-dev",
-    "drupal/twig_tweak": "~1",
-    "drupal/video_embed_field": "~1",
-    "drupal/video_embed_vidyard": "1.0-rc1",
+    "drupal/migrate_plus": "3.0-beta1",
+    "drupal/migrate_tools": "3.0-beta1",
+    "drupal/migrate_source_csv": "2.0-rc2",
     "drush/config-extra": "~1",
     "drush/drush": "~8",
-    "enyo/dropzone": "*",
-    "geerlingguy/drupal-vm": "dev-master",
-    "jackmoore/colorbox": "*"
+    "geerlingguy/drupal-vm": "dev-master"
   },
   "require-dev": {
     "behat/behat": "~3.0",

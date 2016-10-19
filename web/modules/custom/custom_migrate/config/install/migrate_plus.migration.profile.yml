@@ -1,0 +1,57 @@
+
+dependencies:
+  module:
+    - migrate_source_csv
+id: profile
+migration_tags:
+  - CSV
+migration_group: null
+label: 'Profile'
+source:
+  plugin: csv
+  path: 'modules/custom/custom_migrate/assets/csv/profile.csv'
+  header_row_count: 1
+  keys:
+    - id
+  column_names:
+    -
+      id: 'ID'
+    -
+      first_name: 'First Name'
+    -
+      last_name: 'Last Name'
+    -
+      birthday: Birthday
+    -
+      email: Email
+    -
+      photo: Photo
+process:
+  type:
+    plugin: default_value
+    default_value: profile
+  field_first_name: first_name
+  field_last_name: last_name
+  field_birthday: birthday
+  field_email: email
+  field_photo:
+    -
+      plugin: explode
+      source: photo
+      delimiter: ;
+    -
+      plugin: callback
+      callable: trim
+    -
+      plugin: callback
+      callable: strtoupper
+    -
+      plugin: migration
+      migration: photo
+      no_stub: true
+destination:
+  plugin: 'entity:node'
+migration_dependencies:
+  optional:
+    - photo
+

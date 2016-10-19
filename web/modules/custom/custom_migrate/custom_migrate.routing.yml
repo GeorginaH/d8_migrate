@@ -1,0 +1,17 @@
+
+# In order to to create pages it is necessary to define routes for them.
+# A route maps a URL path to a controller. It defines what function
+# or method will be called when a URL is accessed.
+# If the user accesses http://drupal.dev/custom_migrate/hello/migrate, the routing
+# system will look for a route with that path. In this case it will find a
+# match, and execute the _controller callback. In this case the callback is
+# defined as a classname
+# ("\Drupal\custom_migrate\Controller\DefaultController")
+# and a method ("hello").
+custom_migrate.default_controller_migrate:
+  path: 'migrate'
+  defaults:
+    _controller: '\Drupal\custom_migrate\Controller\DefaultController::migrate'
+    _title: 'migrate'
+  requirements:
+    _permission: 'access content'
