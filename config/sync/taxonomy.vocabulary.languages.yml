@@ -1,0 +1,9 @@
+uuid: 3cfbfeda-15bf-4bb1-b854-de313c122602
+langcode: en
+status: true
+dependencies: {  }
+name: Languages
+vid: languages
+description: ''
+hierarchy: 0
+weight: 0

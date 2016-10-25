@@ -1,31 +1,27 @@
-uuid: c5f99512-344d-4013-8201-5e4f915f7310
+uuid: c779a173-4ae5-4d2e-8d41-77859b888fe4
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: FLJGn0ZZFZmDbYbP7UEpW6VvCxqrKHLhkfaPwt5p9Yw
-dependencies:
-  module:
-    - file
+  default_config_hash: oz39hTL4tGcSx7XZAqWO6W3M8Srp9i8jwZs84-MJRQ8
 id: photo
 migration_tags:
   - CSV
 migration_group: null
-label: 'Photos'
+label: Photos
 source:
   constants:
-    source_base_path: 'modules/custom/custom_migrate/assets/photos'
+    source_base_path: modules/custom/custom_migrate/assets/photos
     uri_file: 'public://photos'
   plugin: csv
   track_changes: true
-  path: 'modules/custom/custom_migrate/assets/csv/profile.csv'
+  path: modules/custom/custom_migrate/assets/csv/profile.csv
   header_row_count: 1
   keys:
     - name
   column_names:
-    05:
-      name: 'Photo'
-
+    5:
+      name: Photo
 process:
   source_full_path:
     -

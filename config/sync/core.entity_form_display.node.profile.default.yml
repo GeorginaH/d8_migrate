@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.profile.field_birthday
     - field.field.node.profile.field_email
     - field.field.node.profile.field_first_name
+    - field.field.node.profile.field_language
     - field.field.node.profile.field_last_name
     - field.field.node.profile.field_photo
     - image.style.thumbnail
@@ -53,6 +54,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+  field_language:
+    weight: 37
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
   field_last_name:
     weight: 33
     settings:

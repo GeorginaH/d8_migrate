@@ -1,9 +1,9 @@
-uuid: 9fd93608-fed3-4fec-bf0e-12312771ed1f
+uuid: 0777f123-b73a-4652-b35d-be92bd49bb78
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: VVAc0b2uRVKQB5-1epDyzoU6I8TEQzAVdnXX6_68KDg
+  default_config_hash: 9-md4x63kNtsuaqxt-_F4yqX8Sgl0QjECCc-upxhfQ4
 id: profile
 migration_tags:
   - CSV
@@ -11,13 +11,13 @@ migration_group: null
 label: Profile
 source:
   plugin: csv
-  path: 'modules/custom/custom_migrate/assets/csv/profile.csv'
+  path: modules/custom/custom_migrate/assets/csv/profile.csv
   header_row_count: 1
   keys:
     - id
   column_names:
     -
-      id: 'ID'
+      id: ID
     -
       first_name: 'First Name'
     -
@@ -28,24 +28,34 @@ source:
       email: Email
     -
       photo: Photo
+    -
+      languages: Language
 process:
   type:
     plugin: default_value
     default_value: profile
-  title:
-    plugin: concat
-    source:
-      - first_name
-      - last_name
-    delimiter: ' '
   field_first_name: first_name
   field_last_name: last_name
   field_birthday: birthday
   field_email: email
+  field_language:
+    plugin: entity_generate
+    source: languages
   field_photo:
-    plugin: migration
-    source: photo
-    migration: photo
+    -
+      plugin: explode
+      source: photo
+      delimiter: ;
+    -
+      plugin: callback
+      callable: trim
+    -
+      plugin: callback
+      callable: strtoupper
+    -
+      plugin: migration
+      migration: photo
+      no_stub: true
 destination:
   plugin: 'entity:node'
 migration_dependencies:

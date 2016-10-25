@@ -6,20 +6,20 @@ id: photo
 migration_tags:
   - CSV
 migration_group: null
-label: 'Photos'
+label: Photos
 source:
   constants:
-    source_base_path: 'modules/custom/custom_migrate/assets/photos'
+    source_base_path: modules/custom/custom_migrate/assets/photos
     uri_file: 'public://photos'
   plugin: csv
   track_changes: true
-  path: 'modules/custom/custom_migrate/assets/csv/profile.csv'
+  path: modules/custom/custom_migrate/assets/csv/profile.csv
   header_row_count: 1
   keys:
     - name
   column_names:
-    05:
-      name: 'Photo'
+    5:
+      name: Photo
 
 process:
   source_full_path:
