@@ -124,7 +124,6 @@ class CSV extends SourcePluginBase {
     foreach ($this->configuration['keys'] as $key) {
     	
       $ids[$key]['type'] = 'string';
-			$ids[$key] = $this->getDefinitionFromEntity($key);
     }
     return $ids;
   }
