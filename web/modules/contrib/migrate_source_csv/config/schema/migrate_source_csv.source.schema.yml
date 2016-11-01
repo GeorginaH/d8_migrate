@@ -12,7 +12,7 @@ migrate.source.csv:
       type: sequence
       label: 'Column name(s) which represent the key uniquely identifying each record'
       sequence:
-        type: varchar
+        type: string
         label: 'Key field'
     column_names:
       type: sequence
