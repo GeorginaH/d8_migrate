@@ -32,9 +32,21 @@ process:
   type:
     plugin: default_value
     default_value: profile
+  title:
+    plugin: concat
+    source:
+      - first_name
+      - last_name
+    delimiter: ' '
   field_first_name: first_name
   field_last_name: last_name
   field_birthday: birthday
+#  Apply patch if this is not merge yet: https://www.drupal.org/node/2820490
+  field_birthday:
+    plugin: format_date
+    from_format: 'm/d/Y'
+    to_format: 'Y-m-d'
+    source: birthday
   field_email: email
   field_language:
     plugin: entity_generate
